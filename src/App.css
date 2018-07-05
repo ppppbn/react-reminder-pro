@@ -1,0 +1,141 @@
+@import "~antd/dist/antd.css";
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.horizontal-center {
+  display : flex;
+  justify-content: center;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.error-message-container {
+  margin-top : 10px;
+}
+
+.error-message {
+  color : red;
+}
+
+.text-danger {
+  color : red;
+}
+
+@media screen and (max-width: 450px){
+  .vertical-center-mobile {
+    display : flex;
+    align-items : center;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.app-title {
+  margin-top: .5em;
+}
+
+.custom-form-item {
+  margin-bottom : 0px;
+}
+
+.big-container {
+  padding-bottom: 30px;
+}
+
+.custom-padding-left {
+  padding-left: 15px;
+}
+
+#root {
+  min-height:100%;
+  background: #f0f2f5;
+}
+
+.list-item-container {
+  border: 1px solid #d9d9d9;
+  border-radius : 5px;
+  padding: 10px 50px 10px 15px; 
+  width: 100%;
+}
+
+.delete-icon {
+  position: absolute;
+  right: -9px;
+  top: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  padding: 2px;
+  z-index: 1;
+  background: white;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.custom-position-relative {
+  position : relative;
+}
+
+.ant-list-item-content {
+  width: 100%;
+}
+
+.custom-break-word {
+  word-break: break-word;
+}
+
+.check-icon-container {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  padding: 2px;
+  padding-bottom: 0px;
+  border: 1px solid #999;
+  min-width: 28px;
+  min-height: 28px;
+  cursor: pointer;
+}
+
+.check-icon {
+  color : green;
+  font-size: 22px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
