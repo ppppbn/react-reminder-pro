@@ -69,33 +69,8 @@ class App extends React.Component<any, any> {
   }
 
   public renderTime = (deadline : string) => {
-    const now = new Date();
     deadline = moment(deadline).format('MM-DD-YYYY')
-    const seconds = (new Date(deadline).getTime()/1000) - (now.getTime() / 1000);
-    const days = Math.floor(seconds / (3600*24));
-    if(days > 0){ 
-      return <h5 className=""><i>{"in " + (days+1) + " day" + (days > 1 ? "s" : "")}</i></h5>
-    }
-    else {
-      const hours = Math.floor(seconds / 3600);
-      if(hours > 0) {
-        return <h5 className=""><i>{"in " + hours + " hour" + (hours > 1 ? "s" : "")}</i></h5>
-      }
-      else {
-        const minutes = Math.floor(seconds /60);
-        if(minutes > 0) {
-          return <h5 className=""><i>{"in " + minutes + " minute"  + (minutes > 1 ? "s" : "")}</i></h5>
-        }
-        else {
-          if(seconds > 0){
-            return <h5 className=""><i>{seconds + " second"  + (seconds > 1 ? "s" : "")}</i></h5>
-          }          
-          else {
-            return <h5 className="text-danger"><i>Time's up!</i></h5>
-          }
-        }
-      }
-    } 
+    return <h5 className=""><i>{moment(deadline, "MM-DD-YYYY").endOf("day").fromNow()}</i></h5> 
   }
 
   public renderReminders = () => {
