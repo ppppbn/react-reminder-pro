@@ -2,6 +2,7 @@
   "name": "reminder-pro",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ppppbn.github.io/react-reminder-pro",
   "dependencies": {
     "@types/js-cookie": "^2.1.0",
     "@types/moment": "^2.13.0",
@@ -15,6 +16,8 @@
     "redux": "^4.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy" : "gh-pages -d build",
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
