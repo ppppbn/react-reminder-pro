@@ -69,8 +69,11 @@ class App extends React.Component<any, any> {
   }
 
   public renderTime = (deadline : string) => {
-    deadline = moment(deadline).format('MM-DD-YYYY')
-    return <h5 className=""><i>{moment(deadline, "MM-DD-YYYY").endOf("day").fromNow()}</i></h5> 
+    deadline = moment(deadline).format(dateFormat);
+    const now = moment().format(dateFormat);
+    return (moment(deadline, dateFormat).diff(now, "days") >= 0) ? 
+        <h5 className=""><i>{moment(deadline, dateFormat).endOf("day").fromNow()}</i></h5> 
+        : <h5 className="text-danger"><i>Time's up</i></h5>
   }
 
   public renderReminders = () => {
