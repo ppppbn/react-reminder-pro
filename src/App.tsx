@@ -74,7 +74,7 @@ class App extends React.Component<any, any> {
     const seconds = (new Date(deadline).getTime()/1000) - (now.getTime() / 1000);
     const days = Math.floor(seconds / (3600*24));
     if(days > 0){ 
-      return <h5 className=""><i>{"in " + days + " day" + (days > 1 ? "s" : "")}</i></h5>
+      return <h5 className=""><i>{"in " + (days+1) + " day" + (days > 1 ? "s" : "")}</i></h5>
     }
     else {
       const hours = Math.floor(seconds / 3600);
